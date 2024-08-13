@@ -23,7 +23,8 @@ const Customers = () => {
         dataSource={customersData}
         allowPaging="true"
         allowSorting="true"
-        toolbar={["Search"]}
+        toolbar={["Delete"]}
+        editSettings={{ allowDeleting: "true", allowEditing: "true" }}
         width="auto"
       >
         <ColumnsDirective>
@@ -31,7 +32,7 @@ const Customers = () => {
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject services={[Page, Toolbar]} />
+        <Inject services={[Page, Toolbar, Selection, Edit, Sort, Filter]} />
       </GridComponent>
     </div>
   );
