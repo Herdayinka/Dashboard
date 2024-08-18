@@ -6,6 +6,9 @@ import { themeColors } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSettings = () => {
+  const { setColor, setMode, currentMode, currentColor, setThemeSettings } =
+    useStateContext();
+
   return (
     <div
       className="bg-half-transparent w-screen
